@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Ghaffar || Front end developer</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #faf3e0;
+      }
+      nav {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between; /* Pushes items apart */
+        align-items: center; /* Aligns vertically */
+        background-color: #333; /* Dark navbar background */
+        color: white;
+        padding: 5px;
+      }
+
+      .logo h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 50%; /* Adjust this if needed */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul li {
+        margin: 0 10px; /* Adds spacing between items */
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      ul li a:hover {
+        color: #ff9800; /* Highlight effect on hover */
+      }
+      #About {
+        width: 70%;
+
+        background-color: bisque;
+        margin-left: 14.3%;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .style {
+        border-radius: 56% 44% 19% 81% / 73% 5% 95% 27%;
+        background-color: #ff9800;
+        width: 50%;
+        height: 400px;
+        margin-left: 25%;
+        animation: animate 2s ease-in-out alternate-reverse ;
+      }
+      @keyframes animate{
+        0%{
+          translate: 0;
+        }
+        100%{
+          transform: translateX(-170px
+          );
+        }
+
+      }
+      .style img {
+        width: 75%;
+        height: 320px;
+        margin-left: 15%;
+        margin-top: 11%;
+        border-radius: 50%;
+      }
+      h1 {
+        text-align: center;
+      }
+      .projects {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-evenly;
+        margin-left: 1%;
+      }
+      .card {
+        width: 30%;
+        height: auto;
+        text-align: center;
+        border: 2px dashed green;
+        background-color: white;
+        padding: 3px;
+        border-radius: 10px;
+      }
+      .card img {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .cbtn {
+        width: 130px;
+
+        height: 30px;
+        margin-bottom: 10px;
+        background-color: green;
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        color: yellow;
+        transition: all 1.3s ease-in-out;
+      }
+      .cbtn:hover {
+        background-color: yellow;
+        color: green;
+      }
+      #contact {
+        background-color: lightgrey;
+        border: 2px dotted black;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin-left: 5%;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+      }
+      label {
+        font-weight: bold;
+      }
+      textarea {
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        color: black;
+      }
+      #submit {
+        background-color: black;
+        color: white;
+        width: 30%;
+        margin-left: 35%;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+      #button {
+        color: black;
+        background-color: white;
+        font-weight: bold;
+        width: 30px;
+        height: 30px;
+        display: none;
+      }
+      footer{
+        background-color: black;
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 80px;
+      }
+      .left{
+        animation: left 5s ease-in-out alternate-reverse;
+      }
+      @keyframes left {
+        0%{
+          transform: translate(0);
+        }
+        100%{
+          transform: translateX(-120px);
+        }
+      }
+      .right{
+        animation: right 5s ease-in-out alternate-reverse;
+
+      }
+      @keyframes right {
+        0%{
+          transform: translate(0);
+        }
+        100%{
+          transform: translateX(120px);
+        }
+      }
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        .projects{
+          flex-direction: column;
+        }
+    .card{
+      width: 60%;
+      margin-left: 20%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .button{
+      width:50%;
+      margin-left: 25%;
+      font-size: 20px;
+    }
+}
+
+      @media (max-width: 480px) {
+        nav {
+          flex-direction: column;
+        }
+        .List {
+          display: none;
+        }
+        #button {
+          display: block;
+        }
+        .active {
+          display: flex;
+          flex-direction: column;
+          
+        }
+        ul li {
+          
+          text-align: center;
+        }
+        #About{
+          width: 90%;
+          margin-left: 5%;
+        }
+        .style{
+          width: 80%;
+          margin-left: 10%;
+        }
+        .style img{
+          width: 80%;
+          margin-left: 12%;
+        }
+        .projects{
+          flex-direction: column;
+        }
+        .card{
+          width: 90%;
+          margin-left: 5%;
+          margin-top: 10px;
+        }
+        #contact{
+          width: 90%;
+          margin-left: 4%;
+        }
+      }
+    </style>
+    <link rel="shortcut icon" href="Images/my logo.webp" type="Logo">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <h1>Abdul Ghaffar</h1>
+      </div>
+      <ul class="List">
+        <li><a href="#About"> About</a></li>
+        <li><a href="#all Projects">Projects </a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <button id="button">&#9776;</button>
+    </nav>
+    <br /><br />
+    <div id="About">
+      <div class="style">
+        <img
+          src="./Images/Mypic.jpeg"
+          alt=" My Image"
+        />
+      </div>
+      <div class="text">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm <strong> Abdul Ghaffar </strong>, a passionate Front-End
+          Developer dedicated to creating beautiful, user-friendly, and
+          interactive websites. With a strong foundation in HTML, CSS, and
+          JavaScript, I specialize in designing responsive layouts, crafting
+          smooth animations, and building engaging user experiences.
+        </p>
+        <h3>🚀 What I Do:</h3>
+        <ul>
+          <li>Build modern, responsive, and visually appealing websites.</li>
+          <li>Write clean, maintainable, and efficient code.</li>
+          <li>Create interactive web elements to enhance user engagement.</li>
+          <li>Continuously learn and explore new web technologies.</li>
+        </ul>
+        <h3>💡 Why Web Development?</h3>
+        <p>
+          I love turning ideas into reality through code. Seeing a design come
+          to life with animations, smooth transitions, and perfect
+          responsiveness excites me. My goal is to master JavaScript, React, and
+          advanced front-end technologies to build next-level web experiences.
+        </p>
+        <h3>🎯 My Mission</h3>
+        <p>
+          I aim to grow as a front-end developer, contribute to meaningful
+          projects, and eventually master full-stack development. Every day, I
+          push myself to learn, improve, and create something impactful.
+        </p>
+      </div>
+    </div>
+    <h2
+      style="text-align: center; font-size: 20px; font-weight: bolder"
+      id="all Projects"
+    >
+      Projects I made
+    </h2>
+    <section>
+      <div class="projects">
+        <div class="card left">
+          <img
+            src="./Images/Ghanghro International.png"
+            alt="Ghanghro Internatinal"
+          />
+          <h3>Ghanghro Internatinal</h3>
+          <p>
+            Visa management system, to manage visas at Ghanghro International
+            Overseas Employments.
+          </p>
+          <a href="https://ghanghrointernational.netlify.app/">
+            <button class="cbtn">see project</button>
+          </a>
+        <a href="https://github.com/AbdulGhaffar-coder1/Ghanghro-International">  <button class="cbtn">Github code</button> </a>
+        </div>
+
+        <div class="card right">
+          <img src="./Images/climate.png" alt="Earth Climate" />
+          <h3>How to protect the Environment from Pollution</h3>
+          <p>
+            Earth Climate Blog, that how to protect our Climate from pollution
+            with Responsive design.
+          </p>
+          <a href="https://earthclimate.netlify.app/">
+            <button class="cbtn">see project</button>
+          </a>
+          <a
+            href="https://github.com/AbdulGhaffar-coder1/Earth-CLimate-website"
+          >
+            <button class="cbtn">Github code</button>
+          </a>
+        </div>
+
+        <div class="card left">
+          <img
+            src="./Images/Pak Faisal.webp"
+            height="200px"
+            alt="Pak Faisal Travel"
+          />
+          <h3>Pak Faisal Travel Haq and Tours</h3>
+          <p>
+            Pak Faisal Travel and Tours Agency to booking the Umra , Tickets ,
+            Domestic and Internatinal tours. (working on this project)
+          </p>
+          <a href="https://pakfaisal.netlify.app/">
+            <button class="cbtn">see project</button>
+          </a>
+         <a href="https://github.com/AbdulGhaffar-coder1/Pak-Faisal"> <button class="cbtn">Github code</button> </a>
+        </div>
+      </div>
+      <div class="projects">
+        <div class="card right">
+          <img src="./Images/wage calculator.png" alt="Pak Faisal Travel" />
+          <h3>Daily wege calculator</h3>
+          <p>
+            This is the wage calculator i created during the practice of HTML ,
+            CSS and JavaScript.
+          </p>
+          <a href="https://monthlywagecalculator.netlify.app/">
+            <button class="cbtn">see project</button>
+          </a>
+          <a
+            href="https://github.com/AbdulGhaffar-coder1/Monthly-wage-calculator/tree/main"
+          >
+            <button class="cbtn">Github code</button>
+          </a>
+        </div>
+
+        <div class="card left">
+          <img src="./Images/colacting game.png" alt="Pak Faisal Travel" />
+          <h3>A simple web base game</h3>
+          <p>
+            Catch and Crash game built by HTML,CSS and JavaScript, with good UI
+            but it is not responsive it is only for desktop .
+          </p>
+          <a href="https://catchandcrash.netlify.app/">
+            <button class="cbtn">see project</button></a
+          >
+          <a href="#">
+          <button class="cbtn">Github code</button>
+        </a>
+        </div>
+
+        <div class="card right">
+          <img
+            src="./Images/Bussiness.png"
+            alt="Pak Faisal Travel"
+            height="200px"
+          />
+          <h3>Muhammad Shafique Hanafi</h3>
+          <p>
+            This website showcases the businesses and services of Muhammad
+            Shafique Hanafi, providing insights into his ventures, expertise,
+            and professional offerings. (Working on this project)
+          </p>
+          <a href="https://muhammadshafiquehanafi.netlify.app/">
+            <button class="cbtn">see project</button>
+          </a>
+          <a href="#">
+          <button class="cbtn">Github code</button>
+        </a>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2 style="text-align: center">Contact Me</h2>
+      <form action="ghaffarwandiar1@gmail.com" id="form">
+        <label for="Name">Full Name:</label>
+        <input
+          type="text"
+          name="fullName"
+          id="fullName"
+          required
+          placeholder="Enter Your Full Name"
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+          required
+        />
+        <label for="textarea">Message:</label>
+        <textarea
+          name="text"
+          id="textarea"
+          placeholder="Enter Your Message here"
+          required
+        ></textarea>
+        <br />
+        <input type="submit" name="submit" id="submit" />
+      </form>
+    </section>
+    <footer>
+      <p> &copy; 2025:All rights reserved to the Abdul Ghaffar</p>
+      <a href="https://www.linkedin.com/in/abdul-ghaffar-a967b1351/" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" >
+        <path fill="#0077B5" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.967 0-1.75-.784-1.75-1.75s.783-1.75 1.75-1.75 1.75.784 1.75 1.75-.783 1.75-1.75 1.75zm13.5 11.268h-3v-5.605c0-1.337-.027-3.063-1.867-3.063-1.869 0-2.157 1.46-2.157 2.965v5.703h-3v-10h2.879v1.365h.041c.401-.761 1.379-1.564 2.837-1.564 3.032 0 3.567 1.994 3.567 4.586v5.613z"/>
+    </svg>
+</a>
+<a href="https://github.com/AbdulGhaffar-coder1" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="background-color: white; ">
+      <path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.207 11.385.6.113.793-.258.793-.577 0-.285-.01-1.04-.015-2.04-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.839 1.238 1.839 1.238 1.07 1.835 2.807 1.304 3.492.998.108-.775.42-1.305.762-1.604-2.665-.304-5.466-1.334-5.466-5.93 0-1.31.469-2.38 1.236-3.22-.123-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.515 11.515 0 0 1 3-.404c1.02.004 2.045.137 3 .404 2.29-1.552 3.297-1.23 3.297-1.23.653 1.652.24 2.873.117 3.176.77.84 1.236 1.91 1.236 3.22 0 4.61-2.805 5.624-5.475 5.92.43.37.823 1.102.823 2.22 0 1.605-.015 2.898-.015 3.293 0 .32.19.694.798.576C20.565 22.093 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/>
+  </svg>
+</a>
+
+    </footer>
+    <script>
+      document.querySelector("#button").addEventListener("click", () =>
+          document.querySelector(".List").classList.toggle("active")
+        );
+    </script>
+  </body>
+</html>
