@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather web app</title>
+    <style>
+       
+    </style>
+  <link rel="stylesheet" href="Style.CSS">
+  </head>
+  <body id="body" >
+    <div class="card">
+        <h1 id="weather" style="text-align:center;"> Search the weather </h1>
+    
+    <input type="text" name="search" id="search" placeholder=" Enter the city name" >
+    <button onclick="getweather()" class="search"> search </button>
+    <div class="result">
+        <div class="temp">
+
+        <h2 id="temp">0°C</h2>
+    </div>
+    <div class="normal">
+    <h3 id="humadity"> humidity : 0</h3>
+    <h3 id="windspeed">0/km</h3>
+</div>
+    <div class="condition">
+         <h2> condition </h2>
+        <h3 id="condition"> </h3>
+    </div>
+
+    </div>
+
+</div>
+    <script src="Scrpit.JS"> </script>
+  </body>
+</html>
